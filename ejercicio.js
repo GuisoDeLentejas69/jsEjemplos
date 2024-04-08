@@ -152,20 +152,52 @@ function ejercicio8() {
 }
 
 function ejercicio9() {
-    function esPalindromo(cadena) {
-        var cadenaSinEspacios = cadena.toLowerCase().replace(/ /g, '');
-        var cadenaInvertida = cadenaSinEspacios.split('').reverse().join('');
-        
-        if (cadenaSinEspacios === cadenaInvertida) {
-            return "La cadena es un palíndromo.";
-        } else {
-            return "La cadena no es un palíndromo.";
-        }
-    }
+function Persona(nombre, edad, genero) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.genero = genero;
+}
 
-    var cadenaEjemplo = "La ruta nos aporto otro paso natural";
+Persona.prototype.obtDetalles = function() {
+    console.log("Nombre: " + this.nombre);
+    console.log("Edad: " + this.edad);
+    console.log("Género: " + this.genero);
+}
 
-    console.log(esPalindromo(cadenaEjemplo));
+function Estudiante(nombre, edad, genero, curso, grupo) {
+    Persona.call(this, nombre, edad, genero);
+    this.curso = curso;
+    this.grupo = grupo;
+}
+
+Estudiante.prototype = Object.create(Persona.prototype);
+
+Estudiante.prototype.registrar = function() {
+    console.log(this.nombre + " se ha registrado en el curso " + this.curso + " y el grupo " + this.grupo);
+}
+
+function Profesor(nombre, edad, genero, asignatura, nivel) {
+    Persona.call(this, nombre, edad, genero);
+    this.asignatura = asignatura;
+    this.nivel = nivel;
+}
+
+Profesor.prototype = Object.create(Persona.prototype);
+
+Profesor.prototype.asignar = function() {
+    console.log(this.nombre + " está asignando la asignatura " + this.asignatura + " de nivel " + this.nivel);
+}
+
+var estudiante1 = new Estudiante("Carlos", 20, "Masculino", "Matemáticas", "Grupo A");
+var profesor1 = new Profesor("Laura", 35, "Femenino", "Física", "Avanzado");
+
+estudiante1.obtDetalles();
+estudiante1.registrar();
+
+console.log("\n");
+
+profesor1.obtDetalles();
+profesor1.asignar();
 }
 
 function ejercicio10() {
