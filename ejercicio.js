@@ -142,7 +142,7 @@ return "La cadena es un palíndromo.";
 return "La cadena no es un palíndromo.";
 }
 }
-var cadenaEjemplo = "La ruta nos aporto otro paso natural";
+var cadenaEjemplo = prompt;
 console.log(esPalindromo(cadenaEjemplo));
 }
 
