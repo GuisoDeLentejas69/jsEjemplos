@@ -157,7 +157,7 @@ function ejercicio10() {
         return dado1 + dado2; 
     }
 
-    var resultados = new Array(11).fill(0); 
+    var resultados = [0,0,0,0,0,0,0,0,0,0,0,0,0]; 
 
     for (var i = 0; i < 36000; i++) {
         var suma = lanzarDados();
@@ -165,7 +165,7 @@ function ejercicio10() {
     }
 
     console.log("Número de apariciones de cada suma:");
-    for (var j = 2; j <= 12; j++) {
+    for (var j = 2; j < resultados.length; j++) {
         console.log("Suma " + j + ": " + resultados[j]);
     }
 }
