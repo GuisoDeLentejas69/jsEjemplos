@@ -107,25 +107,14 @@ return "El número " + numero + " es impar.";
 var numeroEntero = prompt("Introduce un número entero:");
 numeroEntero = parseInt(numeroEntero);
 if (!isNaN(numeroEntero)) {
-var numeroEntero = prompt("Introduce un número entero:");
-numeroEntero = parseInt(numeroEntero);
-if (!isNaN(numeroEntero)) {
 console.log(parOImpar(numeroEntero));
-} else {
+}else {
 console.log("Por favor, introduce un número entero válido.");
 }
 }
-}
+
 
 function ejercicio7() {
-
-function informacionCadena(cadena) {
-if (cadena === cadena.toUpperCase()) {
-return "La cadena está formada solo por mayúsculas.";
-}
-else if (cadena === cadena.toLowerCase()) {
-return "La cadena está formada solo por minúsculas.";
-}
 function informacionCadena(cadena) {
 if (cadena === cadena.toUpperCase()) {
 return "La cadena está formada solo por mayúsculas.";
@@ -138,16 +127,12 @@ return "La cadena está formada por una mezcla de mayúsculas y minúsculas.";
 }
 }
 var cadenaTexto = prompt("Introduce una cadena de texto:");
-var cadenaTexto = prompt("Introduce una cadena de texto:");
 console.log(informacionCadena(cadenaTexto));
 }
-}
+
 
 
 function ejercicio8() {
-function esPalindromo(cadena) {
-var cadenaSinEspacios = cadena.toLowerCase().replace(/ /g, '');
-var cadenaInvertida = cadenaSinEspacios.split('').reverse().join('');
 function esPalindromo(cadena) {
 var cadenaSinEspacios = cadena.toLowerCase().replace(/ /g, '');
 var cadenaInvertida = cadenaSinEspacios.split('').reverse().join('');
@@ -158,10 +143,9 @@ return "La cadena no es un palíndromo.";
 }
 }
 var cadenaEjemplo = "La ruta nos aporto otro paso natural";
-var cadenaEjemplo = "La ruta nos aporto otro paso natural";
 console.log(esPalindromo(cadenaEjemplo));
 }
-}
+
 
 function ejercicio9() {
 }
