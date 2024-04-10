@@ -54,21 +54,33 @@ function ejercicio3() {
 function ejercicio4() {
     var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
+<<<<<<< HEAD
 
         var numeroDNI = prompt("Introduce el número de DNI (sin letra):");
         var letraUsuario = prompt("Introduce la letra de DNI:");
 
 
+=======
+        var numeroDNI = prompt("Introduce el número de DNI (sin letra):");
+        var letraUsuario = prompt("Introduce la letra de DNI:");
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         numeroDNI = parseInt(numeroDNI);
 
         if (numeroDNI < 0 || numeroDNI > 99999999 || isNaN(numeroDNI)) {
             console.log("El número de DNI proporcionado no es válido.");
         } else {
+<<<<<<< HEAD
 
             var resto = numeroDNI % 23;
             var letraDNI = letras[resto];
 
 
+=======
+            var resto = numeroDNI % 23;
+            var letraDNI = letras[resto];
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
             if (letraDNI !== letraUsuario.toUpperCase()) {
                 console.log("La letra que has indicado no es correcta.");
             } else {
@@ -78,16 +90,23 @@ function ejercicio4() {
 }
 
 function ejercicio5() {
+<<<<<<< HEAD
 
      function calcularFactorial(numero) {
 
         var factorial = 1;
 
 
+=======
+     function calcularFactorial(numero) {
+        var factorial = 1;
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         for (var i = 1; i <= numero; i++) {
             factorial *= i;
         }
 
+<<<<<<< HEAD
 
         return factorial;
     }
@@ -99,8 +118,16 @@ function ejercicio5() {
     numeroEntero = parseInt(numeroEntero);
 
 
+=======
+        return factorial;
+    }
+
+    var numeroEntero = prompt("Introduce un número entero para calcular su factorial:");
+
+    numeroEntero = parseInt(numeroEntero);
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
     if (!isNaN(numeroEntero) && numeroEntero >= 0) {
-        // Calcular el factorial
         var resultadoFactorial = calcularFactorial(numeroEntero);
         console.log("El factorial de " + numeroEntero + " es: " + resultadoFactorial);
     } else {
@@ -109,7 +136,10 @@ function ejercicio5() {
 }
 
 function ejercicio6() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
     function parOImpar(numero) {
         if (numero % 2 === 0) {
             return "El número " + numero + " es par.";
@@ -118,6 +148,7 @@ function ejercicio6() {
         }
     }
 
+<<<<<<< HEAD
 
     var numeroEntero = prompt("Introduce un número entero:");
 
@@ -127,6 +158,13 @@ function ejercicio6() {
  
     if (!isNaN(numeroEntero)) {
   
+=======
+    var numeroEntero = prompt("Introduce un número entero:");
+
+    numeroEntero = parseInt(numeroEntero);
+
+    if (!isNaN(numeroEntero)) {
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         console.log(parOImpar(numeroEntero));
     } else {
         console.log("Por favor, introduce un número entero válido.");
@@ -134,6 +172,7 @@ function ejercicio6() {
 }
 
 function ejercicio7() {
+<<<<<<< HEAD
    
     function informacionCadena(cadena) {
        
@@ -145,19 +184,34 @@ function ejercicio7() {
             return "La cadena está formada solo por minúsculas.";
         }
        
+=======
+    function informacionCadena(cadena) {
+        if (cadena === cadena.toUpperCase()) {
+            return "La cadena está formada solo por mayúsculas.";
+        }
+        else if (cadena === cadena.toLowerCase()) {
+            return "La cadena está formada solo por minúsculas.";
+        }
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         else {
             return "La cadena está formada por una mezcla de mayúsculas y minúsculas.";
         }
     }
 
+<<<<<<< HEAD
 
     var cadenaTexto = prompt("Introduce una cadena de texto:");
 
   
+=======
+    var cadenaTexto = prompt("Introduce una cadena de texto:");
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
     console.log(informacionCadena(cadenaTexto));
 }
 
 function ejercicio8() {
+<<<<<<< HEAD
    
      function esPalindromo(cadena) {
       
@@ -166,6 +220,12 @@ function ejercicio8() {
         var cadenaInvertida = cadenaSinEspacios.split('').reverse().join('');
         
        
+=======
+     function esPalindromo(cadena) {
+        var cadenaSinEspacios = cadena.toLowerCase().replace(/ /g, '');
+        var cadenaInvertida = cadenaSinEspacios.split('').reverse().join('');
+        
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         if (cadenaSinEspacios === cadenaInvertida) {
             return "La cadena es un palíndromo.";
         } else {
@@ -173,26 +233,88 @@ function ejercicio8() {
         }
     }
 
+<<<<<<< HEAD
    
     var cadenaEjemplo = "La ruta nos aporto otro paso natural";
 
    
+=======
+    var cadenaEjemplo = "La ruta nos aporto otro paso natural";
+
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
     console.log(esPalindromo(cadenaEjemplo));
 }
 
 function ejercicio9() {
+<<<<<<< HEAD
 }
 
 function ejercicio10() {
   
     function lanzarDados() {
         var dado1 = Math.floor(Math.random() * 6) + 1;
+=======
+function Persona(nombre, edad, genero) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.genero = genero;
+}
+
+Persona.prototype.obtDetalles = function() {
+    console.log("Nombre: " + this.nombre);
+    console.log("Edad: " + this.edad);
+    console.log("Género: " + this.genero);
+}
+
+function Estudiante(nombre, edad, genero, curso, grupo) {
+    Persona.call(this, nombre, edad, genero);
+    this.curso = curso;
+    this.grupo = grupo;
+}
+
+Estudiante.prototype = Object.create(Persona.prototype);
+
+Estudiante.prototype.registrar = function() {
+    console.log(this.nombre + " se ha registrado en el curso " + this.curso + " y el grupo " + this.grupo);
+}
+
+function Profesor(nombre, edad, genero, asignatura, nivel) {
+    Persona.call(this, nombre, edad, genero);
+    this.asignatura = asignatura;
+    this.nivel = nivel;
+}
+
+Profesor.prototype = Object.create(Persona.prototype);
+
+Profesor.prototype.asignar = function() {
+    console.log(this.nombre + " está asignando la asignatura " + this.asignatura + " de nivel " + this.nivel);
+}
+
+var estudiante1 = new Estudiante("Carlos", 20, "Masculino", "Matemáticas", "Grupo A");
+var profesor1 = new Profesor("Laura", 35, "Femenino", "Física", "Avanzado");
+
+estudiante1.obtDetalles();
+estudiante1.registrar();
+
+console.log("\n");
+
+profesor1.obtDetalles();
+profesor1.asignar();
+}
+
+function ejercicio10() {
+    function lanzarDados() {
+        var dado1 = Math.floor(Math.random() * 6) + 1; 
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
         var dado2 = Math.floor(Math.random() * 6) + 1; 
         return dado1 + dado2; 
     }
 
     var resultados = new Array(11).fill(0); 
+<<<<<<< HEAD
 
+=======
+>>>>>>> de0bf1eb70357f153ccb1c9b9b271ca15f9750ea
     for (var i = 0; i < 36000; i++) {
         var suma = lanzarDados();
         resultados[suma]++;
